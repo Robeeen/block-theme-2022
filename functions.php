@@ -1,25 +1,44 @@
 <?php
+/**
+ * Block Theme functions and definitions
+ *
+ * @link https://developer.wordpress.org/themes/basics/theme-functions/
+ *
+ * @package WordPress
+ * @subpackage n/a
+ * @since n/a
+ */
 
-if ( ! function_exists( 'block_theme' ) ) :
-	function emptytheme_support()  {
+if ( ! function_exists( 'blocktheme_support' ) ) :
 
-		// Adding support for core block visual styles.
+	/**
+	 * Sets up theme defaults and registers support for various WordPress features.
+	 *
+	 * @since Twenty Twenty-Two 1.0
+	 *
+	 * @return void
+	 */
+	function blocktheme_support() {
+
+		// Add support for block styles.
 		add_theme_support( 'wp-block-styles' );
 
-		// Enqueue editor styles.
-		add_editor_style( 'style.css' );
 	}
-	add_action( 'after_setup_theme', 'block_theme' );
+
 endif;
+
+add_action( 'after_setup_theme', 'blocktheme_support' );
+
 
 /**
  * Enqueue scripts and styles.
  */
 
- function block_theme_scripts() {
+ function blocktheme_styles() {
 	// Enqueue theme stylesheet.
-	wp_enqueue_style( 'block_theme-style', get_template_directory_uri() . '/style.css', array(), wp_get_theme()->get( 'Version' ) );
+	wp_enqueue_style( 'blocktheme-style', get_template_directory_uri() . '/style.css', wp_get_theme()->get( 'Version' ) );
+
 }
 
-add_action( 'wp_enqueue_scripts', 'block_theme_scripts' );
+add_action( 'wp_enqueue_scripts', 'blocktheme_styles' );
 
