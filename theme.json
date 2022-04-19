@@ -30,6 +30,19 @@
 					"name": "Secondary"
 				}
             ]
-        }
+        },
+		"blocks": {
+              "core/heading":{
+				  "color": {
+						"palette": [
+							{
+								"slug": "tertiary",
+								"color": "#1d1f35",
+								"name": "Tertiary"
+							}
+						]
+					}
+              }
+           }
 	}
 }
