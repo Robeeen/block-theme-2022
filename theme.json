@@ -5,6 +5,31 @@
 		"layout": {
 			"contentSize": "840px",
 			"wideSize": "1100px"
-		}
+		},
+		"color": {
+			"custom": false,
+            "palette": [
+                {
+                    "slug": "blacks",
+					"color": "#000000",
+					"name": "Blacks"    
+                },
+                {
+                    "slug": "whites",
+					"color": "#ffffff",
+					"name": "Whites"   
+                },
+				{
+					"slug": "primary",
+					"color": "#D1D1E4",
+					"name": "Primary"
+				},
+				{
+					"slug": "secondary",
+					"color": "#E4D1D1",
+					"name": "Secondary"
+				}
+            ]
+        }
 	}
 }
